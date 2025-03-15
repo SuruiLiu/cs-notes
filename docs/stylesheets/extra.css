@@ -1,0 +1,168 @@
+/* 自定义主题色 */
+[data-md-color-scheme="default"] {
+    --md-primary-fg-color: #1A1A1A;
+    --md-primary-fg-color--light: #333333;
+    --md-primary-fg-color--dark: #000000;
+    --md-accent-fg-color: #DAA520;
+    --md-accent-fg-color--transparent: rgba(218, 165, 32, 0.1);
+}
+
+[data-md-color-scheme="slate"] {
+    --md-primary-fg-color: #1A1A1A;
+    --md-primary-fg-color--light: #333333;
+    --md-primary-fg-color--dark: #000000;
+    --md-accent-fg-color: #DAA520;
+}
+
+/* 导航栏样式 */
+.md-header {
+    background: linear-gradient(135deg, #4A3000 0%, #DAA520 50%, #FF8C00 100%);
+    backdrop-filter: blur(8px);
+}
+
+/* 左侧导航样式 */
+.md-nav {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.md-nav--primary .md-nav__title {
+    display: none;
+}
+
+.md-nav__link {
+    margin: 0.4em 0;
+    padding: 0.4em 0;
+    color: var(--md-default-fg-color);
+}
+
+.md-nav__item .md-nav__link--active {
+    color: var(--md-accent-fg-color);
+    font-weight: 600;
+}
+
+.md-nav__link:hover {
+    color: var(--md-accent-fg-color);
+}
+
+
+/* 搜索框样式 */
+.md-search__input {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* 右侧目录样式 */
+.md-nav--secondary {
+    padding-left: 1.2rem;
+    font-size: 13px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* 导航项缩进 */
+.md-nav__item--nested {
+    margin-left: 1rem;
+}
+
+.md-nav__item--nested .md-nav__link {
+    position: relative;
+}
+
+.md-nav__item--nested .md-nav__link::before {
+    content: "";
+    position: absolute;
+    left: -1rem;
+    top: 50%;
+    width: 0.5rem;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* 移除其他自定义样式，保持默认的白底黑字 */
+
+/* 页脚样式 */
+.md-footer {
+    background: linear-gradient(135deg, #4A3000 0%, #DAA520 50%, #FF8C00 100%);
+}
+
+.md-footer-meta {
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+}
+
+.md-footer__inner {
+    padding: 0.5rem;
+}
+
+.md-footer__link {
+    padding: 0.5rem 0;
+}
+
+.md-footer__title {
+    font-size: 0.8rem;
+}
+
+.md-footer__button {
+    color: var(--md-footer-fg-color--lighter);
+}
+
+.md-footer-meta__inner {
+    padding: 0.8rem 0.2rem;
+    justify-content: space-between;
+}
+
+.md-footer-copyright {
+    color: var(--md-footer-fg-color--light);
+    font-size: 0.8rem;
+    margin: 0 0.8rem;
+}
+
+.md-footer-copyright a {
+    color: var(--md-footer-fg-color);
+    text-decoration: none;
+}
+
+.md-footer-copyright a:hover {
+    text-decoration: underline;
+    color: var(--md-accent-fg-color);
+}
+
+/* 社交链接样式 */
+.md-social {
+    margin: 0 0.8rem;
+}
+
+.md-social__link {
+    padding: 0.3rem;
+}
+
+.md-social__link:hover {
+    color: var(--md-accent-fg-color);
+}
+
+/* Cookie 设置按钮样式 */
+.md-consent__form {
+    padding: 1rem;
+    background-color: var(--md-footer-bg-color);
+    border-radius: 4px;
+}
+
+.md-consent__controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.md-consent__control {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: var(--md-accent-fg-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.md-consent__control:hover {
+    background-color: var(--md-accent-fg-color--transparent);
+} 

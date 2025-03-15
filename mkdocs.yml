@@ -9,44 +9,50 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: 切换到深色模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: 切换到浅色模式
   features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.expand
-    - navigation.indexes
-    - navigation.top
+    - toc.follow
     - search.suggest
     - search.highlight
-    - content.tabs.link
-    - content.code.annotation
     - content.code.copy
-    - toc.follow
-    
+    - content.code.annotate
   font:
     text: Roboto
     code: Roboto Mono
   icon:
     repo: fontawesome/brands/github
 
+extra_css:
+  - stylesheets/extra.css
+
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/SuruiLiu
-  analytics:
-    provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/suruiliu/
+  generator: false  # 移除 "Made with Material for MkDocs"
+  copyright: Copyright &copy; 2024 <a href="https://github.com/SuruiLiu" target="_blank">Surui Liu</a>
+
+# 添加页脚配置
+copyright: >
+  Copyright &copy; 2025
+  <a href="https://github.com/SuruiLiu" target="_blank">Surui Liu</a> 
+
+analytics:
+  provider: google
+  property: !ENV GOOGLE_ANALYTICS_KEY
 
 markdown_extensions:
   - tables
@@ -55,7 +61,11 @@ markdown_extensions:
   - footnotes
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -87,10 +97,22 @@ plugins:
       minify_html: true
 
 nav:
-  - 首页: index.md
+  - 前言: index.md
   - Web开发:
-    - web-dev/index.md
+    - 概述: web-dev/index.md
+    - 前端: web-dev/frontend/index.md
+    - 后端: web-dev/backend/index.md
+    - 数据库: web-dev/database/index.md
+    - 服务器: web-dev/server/index.md
+    - 安全: web-dev/security/index.md
+  - 系统架构: 
+    - 深入理解计算机系统: infra/csapp/overview.md
+    - 计算机网络: infra/network.md
+    - 操作系统: infra/os.md
+    - 并行与分布式系统: infra/distributed/index.md
+    - 计算机系统安全: infra/security/index.md
   - Web3:
-    - web3/index.md
-  - 基础设施:
-    - infra/index.md 
+    - 区块链: web3/blockchain/index.md
+    - 智能合约: web3/contracts/index.md
+    - 去中心化应用: web3/dapps/index.md
+    - 安全审计: web3/security/index.md
