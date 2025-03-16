@@ -1,5 +1,5 @@
 site_name: CS 自学笔记
-site_url: https://suruiliu.github.io/cs-notes
+site_url: https://suruiliu.github.io/cs-notes/
 repo_url: https://github.com/SuruiLiu/cs-notes
 repo_name: SuruiLiu/cs-notes
 
@@ -106,7 +106,9 @@ nav:
     - 服务器: web-dev/server/index.md
     - 安全: web-dev/security/index.md
   - 系统架构: 
-    - 深入理解计算机系统: infra/csapp/overview.md
+    - 深入理解计算机系统: 
+      - 概述: infra/csapp/overview.md
+      - 信息的表示和处理: infra/csapp/section1/chapter1.md
     - 计算机网络: infra/network.md
     - 操作系统: infra/os.md
     - 并行与分布式系统: infra/distributed/index.md
