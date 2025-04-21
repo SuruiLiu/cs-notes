@@ -106,9 +106,11 @@ nav:
     - 服务器: web-dev/server/index.md
     - 安全: web-dev/security/index.md
   - 系统架构: 
-    - 深入理解计算机系统: 
+    - 计算机组成原理: 
       - 概述: infra/csapp/overview.md
-      - 信息的表示和处理: infra/csapp/section1/chapter1.md
+      - 程序是怎样跑起来的: infra/csapp/howProgram.md
+      # - 信息的表示和处理: infra/csapp/section1/chapter1.md
+      # - 程序的机器级表示: infra/csapp/section1/chapter2.md
     - 计算机网络: infra/network.md
     - 操作系统: infra/os.md
     - 并行与分布式系统: infra/distributed/index.md
