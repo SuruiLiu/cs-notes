@@ -12,15 +12,15 @@ CPU (central processing unit, 中央处理器)就是计算机的大脑, 作用�
 - **寄存器的作用**：CPU 实际上是由多个功能各异的寄存器组成，这些寄存器各自承担着数据暂存、地址保存等任务。
 - **程序计数器 (PC)**：程序计数器如何决定程序的执行流程，每执行一条指令后 PC 自动更新，从而实现程序的顺序执行、分支和循环。
 
-  ![von Neumann style](/asset/images/howProgram/vonNeumann.png)
+  ![von Neumann style](../../asset/images/howProgram/vonNeumann.png)
 
 - **函数调用机制**：函数调用由call和return两个指令构成，call把当前指令的“下一条地址”压入栈中并把 PC 改为函数的入口地址，return从栈中“弹出”之前保存的返回地址并把 PC 设置为这个地址。
 
-  ![function call](/asset/images/howProgram/function.png)
+  ![function call](../../asset/images/howProgram/function.png)
 
 - **机器指令/汇编指令**：
 
-  ![machine language](/asset/images/howProgram/machineL.png)
+  ![machine language](../../asset/images/howProgram/machineL.png)
 
 通过这一章，可以了解到计算机"看不见"的硬件世界是如何为软件执行提供基础支持的；而对于程序员来说，理解CPU工作原理有助于写出更高效、更节能的代码。至少对计算机运行机制有个基本印象。深入理解cpu参考机组一文。
 
@@ -42,7 +42,7 @@ CPU (central processing unit, 中央处理器)就是计算机的大脑, 作用�
 - **数值精度问题**：通过实例说明为何像 0.1 这种看似简单的数字反复相加后结果不精确，揭示了**二进制无法精确表示某些十进制小数的原因**。
 - **浮点数的内部表示**：二进制表示小数，双精度浮点数类型用64位，单精度用32位。
 
-![float](/asset/images/howProgram/float.png)
+![float](../../asset/images/howProgram/float.png)
 
 - **误差累积与避免策略**：一是回避策略就是实际有亿万分之一的误差对目的不影响，二是把小数转换成整数来处理，整数就不会有错误了BigInt。
 
@@ -56,7 +56,7 @@ CPU (central processing unit, 中央处理器)就是计算机的大脑, 作用�
 本章围绕内存展开，主要讲解内存管理与数据结构：
 - **物理与逻辑内存结构**：介绍内存的物理构造（以电子元件和存储芯片为例）和逻辑结构（比喻成一幢大楼），帮助读者理解内存如何组织数据。内存基本结构如下图，能够RD根据address地址读出数据，也能WR写到address里。
 
-![ram](/asset/images/howProgram/ram.png)
+![ram](../../asset/images/howProgram/ram.png)
 
 - **指针与数组**：指针通俗的说是门牌号，也就是内存地址，同时也是一个变量意味着内存里也有一个地方放着这个变量的数据，通常是栈。
 - **常见数据结构**：进一步介绍了栈、队列、环形缓冲区、链表以及二叉查找树，解释了它们在实现高效数据存储与检索中的优势和应用场景。深入理解数据结构需要参考数据结构与算法部分。
@@ -71,7 +71,7 @@ CPU (central processing unit, 中央处理器)就是计算机的大脑, 作用�
 缓存也就是把低速设备的数据保存在高速设备中。
 - **磁盘缓存与虚拟内存**：虚拟内存实际上把一部分磁盘拿来当内存，但是正在运行的程序部分在这个时间点必须存在内存中，也就说需要把实际内存的内容和虚拟内存的内容进行置换，达到看起来是同时运行的效果。如果程序运行的那一刻，它需要用到的数据不在在物理内存中，程序访问会触发 “缺页异常”，操作系统就会：从磁盘（虚拟内存）里找到那一页并把它加载进内存，如果内存满了，就会**置换**掉当前 RAM 中某些不活跃的页面。虚拟内存有分页式分段式两种，windows采用的是分页式：
 
-![page](/asset/images/howProgram/pageIn.png)
+![page](../../asset/images/howProgram/pageIn.png)
 
 - **节约内存的编程技巧**：第一种方法是DLL文件，同一个函数在两个程序里内置的方式叫静态链接，那么把这个函数拿出来单独成一个DLL文件可被多个程序共有，提高内存使用效率。第二个方式是_stdcall，比如减少栈清理的次数。
 - **磁盘的物理结构**：磁盘的读写最小单位是扇区，windows对磁盘进行读写的单位是整数倍簇。不管是多么小的文件都会占用一簇的空间，否则就会导致其他文件无法删除。
@@ -106,7 +106,7 @@ CPU (central processing unit, 中央处理器)就是计算机的大脑, 作用�
 - **源文件与本地代码**：解释编程语言写的源代码最终如何被转换为计算机能够识别的机器语言（本地代码）。
 - **编译与链接过程**：详细说明编译器是如何将源代码转换成汇编语言，再经由汇编器得到机器代码，链接器如何整合多个目标文件与库文件生成可执行文件。
 
-![compile](/asset/images/howProgram/compile.png)
+![compile](../../asset/images/howProgram/compile.png)
 
 - **启动过程**：程序启动时需要的附加内容，如启动代码、库文件、动态链接库（DLL）以及栈和堆的生成等。
 - **附加问答**：回答一些关于可执行文件生成和加载过程中的常见问题，进一步加深对整个流程的理解。
@@ -140,11 +140,11 @@ CPU (central processing unit, 中央处理器)就是计算机的大脑, 作用�
 本章聚焦于程序如何与硬件直接打交道，计算机主机无法与外围设备直接连通，那么就需要I/O控制器，其中含有临时保存输入输出数据的内存，也就是端口：
 - **硬件I/O指令**：使用 IN、OUT 指令实现对硬件的输入输出操作，以及这些低级指令在系统中起到的作用。
 
-![port](/asset/images/howProgram/port.png)
+![port](../../asset/images/howProgram/port.png)
 
 - **中断处理与DMA技术**：中断IQR(Interrupt Request)是暂停当前正在运行的的程序跳转到其他程序运行的必要机制，中断请求如何让 CPU “响应”外围设备的操作。按照顺序调查多个外围设备的状态称为轮询。直接内存存取（DMA，Direct memory access）技术在大规模数据传输中提高速度，从而提升系统的实时性与数据处理能力。
 
-![dma](/asset/images/howProgram/dma.png)
+![dma](../../asset/images/howProgram/dma.png)
 
 - **显示原理**：显卡一般配置有VRAM和GPU，显示器的信息一直存储在VRAM里。
 
