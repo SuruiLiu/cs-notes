@@ -109,6 +109,7 @@ nav:
     - 计算机组成原理: 
       - 概述: infra/csapp/overview.md
       - 程序是怎样跑起来的: infra/csapp/howProgram.md
+      - 计算机组成原理: infra/csapp/computerOrganization.md
       # - 信息的表示和处理: infra/csapp/section1/chapter1.md
       # - 程序的机器级表示: infra/csapp/section1/chapter2.md
     - 计算机网络: infra/network.md
