@@ -100,24 +100,27 @@ nav:
   - 前言: index.md
   - Web开发:
     - 概述: web-dev/index.md
-    - 前端: web-dev/frontend/index.md
-    - 后端: web-dev/backend/index.md
-    - 数据库: web-dev/database/index.md
-    - 服务器: web-dev/server/index.md
-    - 安全: web-dev/security/index.md
-  - 系统架构: 
+    # - 前端: web-dev/frontend/index.md
+    # - 后端: web-dev/backend/index.md
+    # - 数据库: web-dev/database/index.md
+    # - 服务器: web-dev/server/index.md
+    # - 安全: web-dev/security/index.md
+  - Infra: 
     - 计算机组成原理: 
       - 概述: infra/csapp/overview.md
       - 程序是怎样跑起来的: infra/csapp/howProgram.md
       - 计算机组成原理: infra/csapp/computerOrganization.md
       # - 信息的表示和处理: infra/csapp/section1/chapter1.md
       # - 程序的机器级表示: infra/csapp/section1/chapter2.md
-    - 计算机网络: infra/network.md
-    - 操作系统: infra/os.md
-    - 并行与分布式系统: infra/distributed/index.md
-    - 计算机系统安全: infra/security/index.md
+    - 计算机网络: infra/network/howNetwork.md
+    # - 操作系统: infra/os.md
+    - 数据结构和算法: infra/leetcode/index.md
+    # - 并行与分布式系统: infra/distributed/index.md
+    # - 计算机系统安全: infra/security/index.md
   - Web3:
-    - 区块链: web3/blockchain/index.md
-    - 智能合约: web3/contracts/index.md
-    - 去中心化应用: web3/dapps/index.md
-    - 安全审计: web3/security/index.md
+    # - 区块链: web3/blockchain/index.md
+    # - 智能合约: web3/contracts/index.md
+    # - 去中心化应用: web3/dapps/index.md
+    # - 安全审计: web3/security/index.md
+  - AI-Agent:
+    - 概述: ai-agent/index.md
